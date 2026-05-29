@@ -282,7 +282,7 @@ jobs:
 
       - name: Run
         run: |
-          ls
+          ls config/scenarios/$LLMDBENCH_CICD_SCENARIO_DIR/$LLMDBENCH_CICD_TARGET.yaml
           if [[ "${{ inputs.cluster_provider }}" == "kind" && "${{ inputs.standup_method }}" == "fma" ]]; then
             echo "Temporarily unable to test \"fma\" on \"kind\" clusters"
           elif [[ "${{ inputs.cluster_provider }}" == "gke" && "${{ inputs.standup_method }}" == "fma" ]]; then
